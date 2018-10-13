@@ -1,7 +1,6 @@
 import socket
+from ClientConection import conection
 import _thread
-from Servidor.ClientConection import conection
-
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -18,5 +17,4 @@ while True :
     con, addr = s.accept()
     _thread.start_new_thread(conection, (con, addr))
     #conection(con, addr)
-    break
 s.close()
