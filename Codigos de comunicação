@@ -1,0 +1,6 @@
+'101' : 'Falha ao conectar ao banco de dados'
+'202' : 'Dados Invalidos'
+'303' : 'Token Invalido'
+'505' : 'Usuario ja existe'
+'606' : 'usuario invalido'
+'707' : 'Mensagem invalida'

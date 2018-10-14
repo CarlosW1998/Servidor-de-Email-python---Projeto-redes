@@ -39,7 +39,7 @@ def conection(con, addr):
                 con.send("SEND TOKEN".encode())
                 token = con.recv(1024).decode()
                 con.send(getEmails(token).encode())
-            else : con.send("Mensagem Invalida".encode())
+            else : con.send("707".encode())
 
 
         #Funçoes de POST
@@ -56,7 +56,7 @@ def conection(con, addr):
                 data = con.recv(4096).decode()
                 data = list(data.split("/"))
                 con.send(SendEmail(data).encode())
-            else : con.send("Mensagem Invalida".encode())
+            else : con.send("707".encode())
 
         #Deletando emails
         elif mensage[0] == 'DELETE':
@@ -67,10 +67,10 @@ def conection(con, addr):
                 data = con.recv(1024).decode()
                 data = list(data.split("/"))
                 con.send(deleteEmail(data).encode())
-            else: con.send("Mensagem Invalida".encode())
+            else: con.send("707".encode())
 
 
-        else :con.send("Mensagem Invalida".encode())
+        else :con.send("707".encode())
 
 
     #Fim da conexão
